@@ -4,5 +4,10 @@ public class PaloTest {
     //Palo
 
 
-    // new branch koment
+    // new branch koment asflkkjlkjlkj
+    // new branch koment sem spravim konflikt
+
+    // Komentar od Patrika
+
+    ///palo
 }
