@@ -5,4 +5,6 @@ public class PaloTest {
 
 
     // new branch koment
+
+    // Komentar od Patrika
 }
