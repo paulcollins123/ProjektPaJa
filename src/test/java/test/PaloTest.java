@@ -8,4 +8,6 @@ public class PaloTest {
     // new branch koment sem spravim konflikt
 
     // Komentar od Patrika
+
+    ///palo
 }
