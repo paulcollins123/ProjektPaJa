@@ -34,10 +34,26 @@ public class PictureDimensions {
 
         List<Integer> collect = pictureElements
                 .stream()
-                .map(e -> e.getSize().getHeight())
+                .map(e-> e.getSize().getHeight())
                 .collect(Collectors.toList());
 
         System.out.println(collect);
+
+        List<Dimension> collect1 = pictureElements
+                .stream()
+                .map(e -> e.getSize())
+                .collect(Collectors.toList());
+
+        System.out.println(collect1);
+
+        System.out.println("ssssssssssssssss");
+        System.out.println(collect1.get(1));
+        System.out.println(collect1.get(1).getHeight());
+
+
+        System.out.println("sss");
+
+
 
 
 //        int width=$(By.xpath("//*[@id=\"hplogo\"]")).getSize().getWidth();

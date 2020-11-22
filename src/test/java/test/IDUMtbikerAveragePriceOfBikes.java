@@ -1,7 +1,9 @@
 package test;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 
 import java.util.ArrayList;
 
@@ -19,7 +21,7 @@ public class IDUMtbikerAveragePriceOfBikes {
         open("https://www.mtbiker.sk/bazar/bicykle/krosove/panske?modul=bazar&od=2");
         usedBikeElements.addAll($$x("//div[(contains(@class,'bazar_row')) and not(contains(@class,'bazarAdRow'))]"));
 
-//       open("https://www.mtbiker.sk/bazar/bicykle/krosove/panske?modul=bazar&od=3");
+       open("https://www.mtbiker.sk/bazar/bicykle/krosove/panske?modul=bazar&od=3");
 //        usedBikeElements.addAll(Selenide.$$(By.xpath("//div[(contains(@class,'bazar_row')) and not(contains(@class,'bazarAdRow'))]")));
 
 
