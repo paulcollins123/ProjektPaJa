@@ -1,13 +1,25 @@
 package test;
 
+import java.util.ArrayList;
+
 public class PaloTest {
-    //Palo
+    public static void main(String[] args)
+    {
+        ArrayList<String> list1 = new ArrayList<String>();    //list 1
+
+        list1.add("A");
+        list1.add("B");
+        list1.add("C");
+        list1.add("D");
+
+        ArrayList<String> list2 = new ArrayList<String>();    //list 2
+
+        list2.add("E");
+        list2.add("F");
 
 
-    // new branch koment asflkkjlkjlkj
-    // new branch koment sem spravim konflikt
+        list1.addAll(list2); //Elements will be inserted from index 2
 
-    // Komentar od Patrika
-
-    ///palo
+        System.out.println(list1);      //combined list
+    }
 }
