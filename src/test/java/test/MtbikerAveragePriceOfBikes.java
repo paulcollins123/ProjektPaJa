@@ -17,7 +17,7 @@ public class MtbikerAveragePriceOfBikes {
         ArrayList<SelenideElement> usedBikeElements = new ArrayList<SelenideElement>();
         SelenideElement nextPage = $x("//div[@class='btn-toolbar pagination']//a/i[@class='fa fa-chevron-right']");
 
-        open("https://www.mtbiker.sk/bazar/bicykle/mestske");
+        open("https://www.mtbiker.sk/bazar/bicykle/horske-bicykle/pevne-a-hardtail");
 
         usedBikeElements.addAll(Selenide.$$(By.xpath("//div[(contains(@class,'bazar_row')) and not(contains(@class,'bazarAdRow'))]")));
 

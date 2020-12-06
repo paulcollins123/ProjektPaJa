@@ -1,4 +1,4 @@
-package test;
+package pajo;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
-import java.util.OptionalDouble;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -16,7 +15,7 @@ public class MtbikerAveragePriceOfBikesDone {
     void test() {
         ArrayList<String> usedBikeElementsStrings = new ArrayList<String>();
         SelenideElement nextPage = $x("//div[@class='btn-toolbar pagination']//a/i[@class='fa fa-chevron-right']");
-        open("https://www.mtbiker.sk/bazar/bicykle/krosove/panske");
+        open("https://www.mtbiker.sk/bazar/bicykle/horske-bicykle/pevne-a-hardtail");
         int lastPage = Integer.valueOf($x("(//div[@class='btn-toolbar pagination']//a[@class='btn'])[last()-1]").getText());
 
         ElementsCollection usedBikeElements;
@@ -31,15 +30,9 @@ public class MtbikerAveragePriceOfBikesDone {
             }
         }
 
-
-
-
-        System.out.println("...");
-        System.out.println("...");
-
-        for (String element : usedBikeElementsStrings) {
-            System.out.println(element);
-        }
+//        for (String element : usedBikeElementsStrings) {
+//            System.out.println(element);
+//        }
 
         Integer sum = usedBikeElementsStrings
                 .stream()
@@ -47,16 +40,22 @@ public class MtbikerAveragePriceOfBikesDone {
                 .map(Integer::valueOf)
                 .reduce(0, Integer::sum);
 
-        System.out.println("end");
 
-        OptionalDouble average = usedBikeElementsStrings
+        double average = usedBikeElementsStrings
                 .stream()
-                .map(s->s.replaceAll("(€)$","").replace(".",""))
+                .map(s -> s.replaceAll("(€)$", "").replace(".", ""))
                 .map(Integer::valueOf)
                 .mapToDouble(a -> a)
-                .average();
+                .average()
+                .getAsDouble();
 
-      System.out.println("suma " + sum);
-      System.out.println("average" + average);
+      System.out.println("All together: " + sum + "€");
+      System.out.println("Average price: " + String.format("%.2f", average) + "€");
+
+//
+//        AtomicInteger count = new AtomicInteger();
+//        Stream<Double> doubles = Stream.of(1.11, 2.22, 3.33);
+//        Double suma = doubles.reduce(0.0, (x,y) -> {count.incrementAndGet(); return x+y;});
+//        System.out.println(suma/count.get());
     }
 }
