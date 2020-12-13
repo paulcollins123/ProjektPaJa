@@ -21,5 +21,14 @@ public class PaloTest {
         list1.addAll(list2); //Elements will be inserted from index 2
 
         System.out.println(list1);      //combined list
+
+
+
+
+// list
+//        lslslsls
+//
+//                slslslls
+
     }
 }
