@@ -19,6 +19,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class ScreenShotOfElement {
 
+    //koment ktory nema ist na git
     @Test
     void test() throws IOException {
         Configuration.startMaximized = true;
