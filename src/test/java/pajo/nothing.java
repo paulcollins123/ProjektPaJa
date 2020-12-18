@@ -1,5 +1,5 @@
 package pajo;
 
 public class nothing {
-//toto je master
+//toto je uat
 }
